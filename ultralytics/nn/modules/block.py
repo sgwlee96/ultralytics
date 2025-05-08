@@ -1399,6 +1399,9 @@ class A2C2f(nn.Module):
             return x + self.gamma.view(-1, len(self.gamma), 1, 1) * y
         return y
 
+import torch
+import torch.nn as nn
+
 class MHSA(nn.Module):
     def __init__(self, in_channels, embed_dim, num_heads=4, dropout=0.1):
         """
